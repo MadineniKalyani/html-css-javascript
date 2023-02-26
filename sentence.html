@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> name</title>
+    </head>
+    <body>
+        <p>enter a name</p>
+        <input type="text" id="data">
+        <button onclick="myFunction()">click</button>
+        <input type="text" id="target">
+       
+        <!-- <p id="p"></p> -->
+        <script >
+               let i=0;
+               function myFunction(){
+                 var x = document.getElementById("data").value;
+                 var y= document.getElementById('target');
+                 var words = x.split(" ");
+                 y.value+=words[i];
+                    i++;
+                                 }
+                //  for(var i=0; i<words.length;i++){
+                //     y.value+=words[i];
+                //  words[i]+=" ";
+            // document.getElementById("p").innerHTML = words;
+            // console.log(words);
+        </script>
+    </body>
+</html>

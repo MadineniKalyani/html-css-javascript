@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>letter words</title>
+    </head>
+    <body>
+        <p>String  letters reverse:</p>
+        <p id="demo"></p>
+        <script>
+            const str = 'hello world';
+             const reverseSentence = str => {
+             const arr = str.split(" ")
+             var reversed = arr.map(el => {
+               return el.split('').reverse().join("")
+               })
+               return reversed.join(" ")
+               }
+                console.log(reverseSentence(str));
+                document.getElementById("demo").innerHTML = (reverseSentence(str)) ;
+        </script>
+    </body>
+</html>

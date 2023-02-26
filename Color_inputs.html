@@ -1,0 +1,35 @@
+<html>
+	
+    <body>
+        <input type="number" id="input-number">
+        <button onclick="generate()" type="submit">Add inputs</button>
+        <ul type="none" id="ind"></ul>
+
+        <script>
+            function generate(){
+                const num = document.getElementById("input-number").value;
+                let ul = document.getElementById("ind");
+                
+                ul.innerHTML = '';
+                for(let i = 1;i <= num; i++){
+                	let n = generateRandomColor();
+                	let li = document.createElement("li");
+                    let ip = document.createElement("input");
+                    ip.value= i;
+                    li.appendChild(ip);
+                    ip.style.backgroundColor = n;
+                    ul.appendChild(li);
+                }
+            }
+            function generateRandomColor(){
+                let maxVal = 0xffffff; // 16777215
+                let randomNumber = Math.random() * maxVal; 
+                randomNumber = Math.floor(randomNumber);
+                randomNumber = randomNumber.toString(16);
+                let randColor = randomNumber.padStart(6, 0);   
+                return `#${randColor.toUpperCase()}`
+            }
+        </script>
+
+    </body>
+</html>

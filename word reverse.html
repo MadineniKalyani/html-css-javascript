@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>words reverse</title>
+    </head>
+    <body>
+        <p>String reverse:</p>
+        <p id="demo"></p>
+        <!-- <input type="text" id="num">
+        <button onclick="reverseWords">ok</button>
+        <input type="text" id="num"> -->
+        <script>
+            
+            const reverseWords= (sentence) => {
+            const words = sentence.split(" ")
+            console.log(words);
+            const revWords = words.reverse()
+            return revWords.join(" ")
+            }
+            console.log(reverseWords("hello world"));
+            document.getElementById("demo").innerHTML = (reverseWords("hello world")) ;
+        
+        </script>
+    </body>
+</html>

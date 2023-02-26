@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> name</title>
+    </head>
+    <body>
+        <p>enter a name</p>
+        <input type="text" id="data">
+        <button onclick="myFunction()">click</button>
+        <input type="text" id="target">
+       
+        <p id="p"></p>
+        <script>
+            var reverse=0;
+            function myFunction(){
+                var x = document.getElementById("data").value;
+                var y=document.getElementById("target");
+                var text=x.length;
+                var data=text-reverse;
+                var text=x.charAt(data);
+                y.value +=text;
+                reverse++
+
+            }
+
+            // var current = 7;
+            // function myFunction(){
+            //    var x = document.g etElementById("data").value;
+            //     var elem = document.getElementById('target');
+            //     if (current >= 0){
+            //         elem.value += x.charAt(current);
+            //         current--;
+            //     }
+            //     console.log(curent+" "+elem.value);
+            // }
+        </script>
+    </body>
+</html>

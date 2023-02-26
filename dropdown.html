@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Dropdown list</title>      
+    </head>       
+        <body>
+            <p>Dropdown list</p>
+           <select id ="input" onchange="random()">           
+            <option>Select Role</option>
+            <option>Front end</option>
+            <option>Back end</option>
+           </select>
+           <div id="output">
+            <select >
+                <option>select language</option>               
+               </select>
+           </div>
+        </body>
+        <script >
+            function random()
+            {           
+            var a= document.getElementById('input').value;
+            if(a==="Front end")
+            {
+                var array=["HTML"," css","javascript"];
+            }
+             else if (a==="Back end")
+            {
+                var array=[".net","dbms","python"];
+            }
+            else{
+                var array=[];
+            }
+            var string="";
+            for(i=0;i<array.length;i++)
+            {
+                string=string+"<option>"+array[i]+"</option>";
+            }
+            string="<select name=''>"+string+"</select>";
+            document.getElementById('output').innerHTML=string;
+            }
+        </script> 
+</html>

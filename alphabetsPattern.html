@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>alphabet</title>
+    </head>
+    <body>
+        <h1>alphabet pattern</h1>
+        <p id="string" ><br></p>
+       
+       <script>
+        let  n =5;
+        let string = " ";
+        for(let i = 1;i <= n; i++) {
+            for(let j=0;j<i;j++){
+            for(let k=0;k<=j;k++)   {
+            string += String.fromCharCode((65+j));
+            }
+        }
+            string += "<br/>";
+            
+        }
+        console.log(string);
+        document.getElementById("string").innerHTML = (string) ;
+            
+        </script>
+    </body>
+</html>

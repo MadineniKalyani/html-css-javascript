@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title> uppercase</title>
+
+    </head>
+    <body>
+        <p>String first and last letter uppercase:</p>
+        <p id="demo"></p>
+        <script>
+             function capitalize(str) {
+             var spl = str.split(" "); 
+             var words = [];
+                 for (let i = 0; i < spl.length; i++) {
+                let changedWord = "";
+               for (let j = 0; j < spl[i].length; j++) {     
+                 if(j == 0 || j == spl[i].length - 1) {
+                    changedWord += spl[i][j].toUpperCase();
+                 } else {
+                  changedWord += spl[i][j].toLowerCase();
+                   }
+                  }
+                words.push(changedWord);
+                console.log(words);
+                   }
+                  console.log(words.join(" "));
+                  document.getElementById("demo").innerHTML = words;
+                      }
+                capitalize("hELlo wORld");
+            </script>
+            
+    </body>
+
+</html>

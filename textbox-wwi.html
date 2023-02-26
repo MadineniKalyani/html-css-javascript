@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> textbox</title>
+    </head>
+    <body>
+        <p>enter a number</p>
+        <input type="text" id="num">
+        <button onclick="myFunction()">ok</button>
+        <p id="p"></p>
+        <script type="text/javascript">
+            function myFunction(){
+                const input=document.getElementById('num').value;
+                for(i=1;i<=input;i++){
+                    var box=document.createElement("input");
+                    box.type="text";
+                   var n =document.getElementById('p');
+              
+                   n.appendChild(box);
+                }
+            }
+        </script>
+    </body>
+</html>

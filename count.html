@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>count</title>
+    </head>
+    <body>
+        <h1>count the array</h1>
+        <p id="count"></p>
+        <script>
+            var arr = ['x', 'y', 'z', 'x', 'z', 'z',];
+             var count = {};
+            for (var element of arr) {
+                if (count[element]) {
+                count[element] += 1;
+                 } else {
+               count[element] = 1;
+           }
+              }
+              console.log(count);
+              Object.entries(count).forEach(object=> {
+                document.getElementById("count").innerHTML += `${object[0]} -${object[1]}`;
+              });
+            
+        </script>
+    </body>
+</html>

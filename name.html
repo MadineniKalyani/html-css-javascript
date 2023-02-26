@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> name</title>
+    </head>
+    <body>
+        <p>enter a name</p>
+        <input type="text" id="data">
+        <button onclick="myFunction()">click</button>
+        <input type="text" id="target">
+       
+        <p id="p"></p>
+        <script type="text/javascript">
+            var current = 0;
+            function myFunction(){
+                var x = document.getElementById("data").value;
+                var elem = document.getElementById('target');
+                if (current < x.length){
+                    elem.value += x.charAt(current);
+                    current++;
+                                 }
+            }
+        </script>
+    </body>
+</html>
